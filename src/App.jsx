@@ -1,5 +1,6 @@
 import './App.css'
-import Navbar from './components/navbar/Navbar'
+import Navbar from './components/Navbar'
+import Promos from './components/Promos';
 
 function App() {
   
@@ -8,6 +9,7 @@ function App() {
     
     
     <Navbar/>
+    <Promos/>
     
 
     
