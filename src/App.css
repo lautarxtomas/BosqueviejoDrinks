@@ -20,6 +20,7 @@
     margin-top: 25px;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .promoCard{
@@ -36,6 +37,13 @@
 
 .promoCard img{
     width: 170px;
+}
+
+.buttonContainer{
+    display: flex;
+    height: 50px;
+    align-items: center;
+    gap: 20px;
 }
 
 
