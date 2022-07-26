@@ -1,7 +1,9 @@
 import React from 'react'
 import { useState, useEffect } from "react"
+import { Icon } from '@iconify/react';
+import Swal from 'sweetalert2'
 
-const ItemCount = ({stock, initial}) => {
+const ItemCount = ({stock, initial, nombreProducto}) => {
 
 const [numero, setNumero] = useState(initial);
 
@@ -19,7 +21,12 @@ const sumarUno = () => {
 
 const onAdd = () => {
   if (numero <= stock) {
-    alert(`Se agregaron ${numero} items al carrito`)
+    Swal.fire(
+      `${numero} ${nombreProducto} agregado/s al carrito`,
+      '',
+      'success'
+    )
+    // alert(`Se agregaron ${numero} ${nombreProducto} items al carrito`)
   } else{
     alert(`No hay stock suficiente, pruebe agregando menos items al carrito`)
   }
@@ -27,10 +34,10 @@ const onAdd = () => {
 
   return (
     <div className="buttonContainer">
-        <button disabled={numero === 0} onClick={restarUno}> -1 </button>
+        <button className="controls" disabled={numero === 0} onClick={restarUno}> -1 </button>
         <div> {numero} </div>
-        <button disabled={numero === stock} onClick={sumarUno}> +1 </button>
-        <button onClick={onAdd}> AGREGAR AL CARRITO </button>
+        <button className="controls" disabled={numero === stock} onClick={sumarUno}> +1 </button>
+        <button className="agregarAlCarrito" disabled = {numero ===0 }  onClick={onAdd}> <Icon icon="iconoir:add-to-cart" className="iconifyAdd" />  </button>
     </div>
   )
 }

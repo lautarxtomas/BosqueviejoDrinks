@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap');
+
+*{
+    font-family: 'Exo 2', sans-serif;
+}
+
+.home{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+}
+
 .navbar{
     background-color: #AEDCC0;
     height: 150px;
@@ -16,11 +29,13 @@
     color: #343E3D
 }
 
-.promos{
-    margin-top: 25px;
+.promoList{
+    background-image: linear-gradient(to right, transparent, rgb(20, 153, 98)); 
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap;
+    align-items: center;
+    height: 500px;
+    
 }
 
 .promoCard{
@@ -29,7 +44,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     text-align: center;
     width: 250px;
     height: 400px;
@@ -41,10 +56,71 @@
 
 .buttonContainer{
     display: flex;
-    height: 50px;
+    height: 100px;
+    width: 100%;
     align-items: center;
-    gap: 20px;
+    justify-content: space-evenly;
+    background-image: linear-gradient(to bottom, transparent, rgb(12, 32, 12));
+    
 }
+
+.controls{
+    background-color: rgb(99, 192, 99);
+    border: none;
+    border-radius: 9px;
+}
+
+.controls:hover{
+    background-color: rgb(63, 119, 63);
+    
+}
+
+.agregarAlCarrito{
+    width: 50px;
+    height: 40px;
+    background-color: rgb(99, 192, 99);
+    border: none;
+    border-radius: 8px;
+}
+
+.agregarAlCarrito:hover{
+    background-color: rgb(7, 34, 7);
+}
+
+.iconifyAdd{
+    font-size: 20px;
+}
+
+footer{
+    background-color: #607466;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 40px;
+    padding: 20px;
+    color: white;
+    
+}
+
+.iconContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    padding-bottom: 20px;
+    
+}
+
+.iconFooter{
+    font-size: 50px;
+    color: #AEDCC0;
+}
+
+.iconFooter:hover{
+    color: rgb(103, 194, 103);
+}
+
 
 
 

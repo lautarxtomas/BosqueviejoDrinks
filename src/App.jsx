@@ -1,19 +1,16 @@
 import './App.css'
-import Navbar from './components/Navbar'
-import Promos from './components/Promos';
+import Home from './components/Home'
+
 
 function App() {
   
   return (
-    <>
+    <div classname="App">
+    
+    <Home/>
     
     
-    <Navbar/>
-    <Promos/>
-    
-
-    
-    </>
+    </div>
   );
 }
 
