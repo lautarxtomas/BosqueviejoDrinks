@@ -26,7 +26,6 @@ const onAdd = () => {
       '',
       'success'
     )
-    // alert(`Se agregaron ${numero} ${nombreProducto} items al carrito`)
   } else{
     alert(`No hay stock suficiente, pruebe agregando menos items al carrito`)
   }

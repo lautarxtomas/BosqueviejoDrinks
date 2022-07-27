@@ -69,7 +69,6 @@ footer{
     flex-direction: column;
 }
 
-
 .promoList{
     background-image: linear-gradient(to right, transparent, rgb(20, 153, 98)); 
     display: flex;

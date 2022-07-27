@@ -1,11 +1,18 @@
 import React from 'react'
 import Promo from './Promo'
 
-const PromoList = ({products}) => {
+const PromoList = ({products, loading}) => {
 
   return (
 
     <div className="promoList">
+
+      {/* MIENTRAS LOADING SE MANTENGA EN TRUE, VA A APARECER EL SPINNER */} 
+      {loading && 
+        <div className="d-flex justify-content-center">
+          <div class="spinner-border" role="status"></div>
+        </div>
+      }
 
     {
       products.map((item) =>
