@@ -28,7 +28,7 @@ useEffect(() => {
 
   return (
     <div className="promoListContainer">
-     <PromoList products={JSON.stringyfy(drinks)}/>
+     <PromoList products={drinks}/>
     </div>
   )
 }
