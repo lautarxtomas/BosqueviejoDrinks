@@ -1,29 +1,26 @@
 import React from 'react'
 import PromoList from './PromoList'
-
-// import data from "../drinks.json"
+import data from "../products/drinks.json"
 import { useState, useEffect } from 'react'
 
 
+const productPromise = () => {
+  return new Promise((resolve, reject) => {
+      setTimeout(() => {
+          resolve(data)
+      }, 2000)
+  })
+} 
+
 const PromoListContainer = () => {
 
-const [drinks, setDrinks] = useState()
+const [drinks, setDrinks] = useState([])
 // const [error, setError] = useState(false)
 // const [loading, setLoading] = useState(true)
 
-const obtenerDatos = async() => {
-  setTimeout(() => {
-    fetch("../products/drinks.json")
-      .then(response => response.json())
-      .then((productos) => {
-          setDrinks(productos)
-      })
-  }, 2000)
-}
-
-
 useEffect(() => {
-  obtenerDatos()
+  productPromise()
+  .then(response => setDrinks(response))
   }, [])
 
   return (
@@ -93,6 +90,15 @@ export default PromoListContainer
 
 
 
+// const obtenerDatos = async() => {
+//   setTimeout(() => {
+//     fetch(data)
+//       .then(response => response.json())
+//       .then((productos) => {
+//           setDrinks(productos)
+//       })
+//   }, 2000)
+// }
 
 
 // async function obtenerDatos () {
