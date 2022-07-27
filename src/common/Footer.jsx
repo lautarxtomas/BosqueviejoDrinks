@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer>
         <div>
-            <p>¡BUSCANOS EN NUESTRAS REDES!</p>
+            <p className="footerText">¡BUSCANOS EN NUESTRAS REDES!</p>
         </div>
         <div className="iconContainer">
             <a href="#"> <Icon className="iconFooter" icon="akar-icons:whatsapp-fill" /> </a>

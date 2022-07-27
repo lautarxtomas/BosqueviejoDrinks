@@ -1,15 +1,12 @@
+/* -------------------------- COMMON ---------------------------------- */
+
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap');
 
 *{
     font-family: 'Exo 2', sans-serif;
 }
 
-.home{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    
-}
+/* ---------------- NAVBAR ---------------- */
 
 .navbar{
     background-color: #AEDCC0;
@@ -29,67 +26,7 @@
     color: #343E3D
 }
 
-.promoList{
-    background-image: linear-gradient(to right, transparent, rgb(20, 153, 98)); 
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 500px;
-    
-}
-
-.promoCard{
-    background-color: #7BD389;
-    border: solid 1px black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    text-align: center;
-    width: 250px;
-    height: 400px;
-}
-
-.promoCard img{
-    width: 170px;
-}
-
-.buttonContainer{
-    display: flex;
-    height: 100px;
-    width: 100%;
-    align-items: center;
-    justify-content: space-evenly;
-    background-image: linear-gradient(to bottom, transparent, rgb(12, 32, 12));
-    
-}
-
-.controls{
-    background-color: rgb(99, 192, 99);
-    border: none;
-    border-radius: 9px;
-}
-
-.controls:hover{
-    background-color: rgb(63, 119, 63);
-    
-}
-
-.agregarAlCarrito{
-    width: 50px;
-    height: 40px;
-    background-color: rgb(99, 192, 99);
-    border: none;
-    border-radius: 8px;
-}
-
-.agregarAlCarrito:hover{
-    background-color: rgb(7, 34, 7);
-}
-
-.iconifyAdd{
-    font-size: 20px;
-}
+/* ---------------- FOOTER ---------------- */
 
 footer{
     background-color: #607466;
@@ -121,7 +58,133 @@ footer{
     color: rgb(103, 194, 103);
 }
 
+/* ------------------------------------------------------- */
 
 
+/* ------------------------------- HOME ---------------------------------- */
+
+.home{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.promoList{
+    background-image: linear-gradient(to right, transparent, rgb(20, 153, 98)); 
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 500px;
+}
+
+.promoCard{
+    background-color: #7BD389;
+    border: solid 1px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 250px;
+    height: 400px;
+}
+
+.promoCard img{
+    width: 170px;
+}
+
+/* ------------ ITEM COUNT / ADD TO CART BTN ------------ */
+
+.buttonContainer{
+    display: flex;
+    height: 100px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    background-image: linear-gradient(to bottom, transparent, rgb(12, 32, 12));
+    
+}
+
+.controls{
+    background-color: rgb(99, 192, 99);
+    border: none;
+    border-radius: 9px;
+}
+
+.controls:hover{
+    background-color: rgb(63, 119, 63);
+    
+}
+
+.agregarAlCarrito{
+    width: 50px;
+    height: 40px;
+    background-color: rgb(99, 192, 99);
+    border: none;
+    border-radius: 8px;
+}
+
+.agregarAlCarrito:hover{
+    background-color: rgb(63, 119, 63);
+}
+
+.agregarAlCarrito:active{
+    background-image: linear-gradient(to bottom, transparent, rgb(24, 87, 24))
+}
+
+.iconifyAdd{
+    font-size: 20px;
+}
+
+/* --------------------------------------------------------------------------------- */
+
+
+/* ------------------------ MOBILE RESPONSIVE ------------------------ */
+@media screen and (min-width: 0px) and (max-width: 450px){
+
+    .navbar{
+        height: auto;
+    }
+
+    .cartWidget{
+        margin: 0 auto;
+        margin-top: 15px;
+    }
+
+
+    .home{
+        background-image: linear-gradient(to bottom, rgb(117, 172, 117), rgb(59, 87, 59));
+        height: auto;
+    }
+
+    .promoList{
+        flex-direction: column;
+        margin: 25px;
+        gap: 25px;
+        align-items: center;
+        height: auto;
+        background: none;
+    }
+    
+    .footerText{
+        text-align: center;
+    }
+
+
+
+}
+
+
+
+/* ------------------------ TABLET RESPONSIVE ------------------------ */
+@media screen and (min-width: 451px) and (max-width: 1024px){
+
+
+
+
+
+
+}
 
 

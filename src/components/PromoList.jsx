@@ -1,12 +1,6 @@
 import React from 'react'
 import Promo from './Promo'
 
-import ipa from '../img/andesipa.png'
-import fernet from '../img/fernet.png'
-import campari from '../img/campari.png'
-import schneider from '../img/schneider.png'
-
-
 const PromoList = ({products}) => {
 
   return (
