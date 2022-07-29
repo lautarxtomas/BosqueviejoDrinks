@@ -70,7 +70,7 @@ footer{
 }
 
 .promoList{
-    background-image: linear-gradient(to right, transparent, rgb(20, 153, 98)); 
+    background-image: linear-gradient(to right, rgb(99, 187, 150), rgb(20, 153, 98)); 
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -78,7 +78,7 @@ footer{
 }
 
 .promoCard{
-    background-color: #7BD389;
+    background-image: linear-gradient(to bottom, rgb(100, 150, 126), rgb(113, 175, 113));
     border: solid 1px black;
     display: flex;
     flex-direction: column;
@@ -93,6 +93,28 @@ footer{
     width: 170px;
 }
 
+.promoDetail{
+    background-image: linear-gradient(to right, rgb(187, 212, 202), rgb(59, 182, 131)); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+.promoDetailCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 900px;
+    height: 500px;
+}
+
+.promoDetailCard img{
+    width: 200px;
+}
+
 /* ------------ ITEM COUNT / ADD TO CART BTN ------------ */
 
 .buttonContainer{
@@ -101,7 +123,7 @@ footer{
     width: 100%;
     align-items: center;
     justify-content: space-evenly;
-    background-image: linear-gradient(to bottom, transparent, rgb(12, 32, 12));
+    
     
 }
 

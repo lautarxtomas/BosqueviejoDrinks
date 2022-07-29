@@ -10,7 +10,7 @@ const PromoList = ({products, loading}) => {
       {/* MIENTRAS LOADING SE MANTENGA EN TRUE, VA A APARECER EL SPINNER */} 
       {loading && 
         <div className="d-flex justify-content-center">
-          <div class="spinner-border" role="status"></div>
+          <div className="spinner-border" role="status"></div>
         </div>
       }
 

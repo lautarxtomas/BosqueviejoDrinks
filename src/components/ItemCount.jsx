@@ -36,7 +36,7 @@ const onAdd = () => {
         <button className="controls" disabled={numero === 0} onClick={restarUno}> -1 </button>
         <div> {numero} </div>
         <button className="controls" disabled={numero === stock} onClick={sumarUno}> +1 </button>
-        <button className="agregarAlCarrito" disabled = {numero ===0 }  onClick={onAdd}> <Icon icon="iconoir:add-to-cart" className="iconifyAdd" />  </button>
+        <button className="agregarAlCarrito" disabled = {numero === 0 }  onClick={onAdd}> <Icon icon="iconoir:add-to-cart" className="iconifyAdd" />  </button>
     </div>
   )
 }
