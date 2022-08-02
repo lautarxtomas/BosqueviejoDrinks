@@ -70,11 +70,15 @@ footer{
 }
 
 .promoList{
-    background-image: linear-gradient(to right, rgb(99, 187, 150), rgb(20, 153, 98)); 
+    background-image: radial-gradient(rgb(102, 153, 113), rgb(210, 228, 220));
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     align-items: center;
-    height: 500px;
+    padding: 30px;
+    gap: 40px;
+    min-height: 80vh;
+    
 }
 
 .promoCard{
@@ -90,7 +94,8 @@ footer{
 }
 
 .promoCard img{
-    width: 170px;
+    width: 150px;
+    max-height: 180px;
 }
 
 .promoDetail{
@@ -98,7 +103,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 500px;
+    height: 600px;
 }
 
 .promoDetailCard{
@@ -109,11 +114,34 @@ footer{
     text-align: center;
     width: 900px;
     height: 500px;
+    padding: 30px;
 }
 
 .promoDetailCard img{
     width: 200px;
 }
+
+.detailBtn{
+    text-decoration: none;
+    background-color: rgb(122, 185, 122);
+    border-radius: 20px;
+    width: 150px;
+}
+
+.detailBtn:hover{
+    background-color: rgb(87, 126, 87);
+}
+
+.detailLink{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.detailLink:hover{
+    color: black;
+}
+
+
 
 /* ------------ ITEM COUNT / ADD TO CART BTN ------------ */
 

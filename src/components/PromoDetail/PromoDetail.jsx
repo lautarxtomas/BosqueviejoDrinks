@@ -16,7 +16,7 @@ const PromoDetail = ({product, loading}) => {
         </div>
       }
 
-      {loading || // SI NO PONGO ESTO, DURANTE EL LOADING SE PRERENDERIZA LA CARD SIN LOS VALORES CARGADOS, QUEDANDO FEO A LA VISTA.
+      {loading || // SI NO PONGO ESTO, DURANTE EL LOADING SE PRERENDERIZA LA CARD SIN LOS VALORES CARGADOS, QUEDANDO FEO A LA VISTA (Y TAMPOCO ANDA EL ITEMCOUNT SIN ESTO).
         <div className="promoDetailCard">
             <img src={product.imgSrc} alt="" />
             <h4>{product.nombre}</h4>

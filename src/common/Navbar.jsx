@@ -24,15 +24,27 @@ const Navbar = () => {
                 </li>
               
                 <li className="nav-item">
-                  <Link className="nav-link" to={'/catalogo'}> CATALOGO </Link>
+                  <Link className="nav-link" to={'/category/cervezas'}> CERVEZAS </Link>
                 </li>
                 
                 <li className="nav-item">
-                  <Link className="nav-link" to={'/nosotros'}> NOSOTROS </Link>
+                  <Link className="nav-link" to={'/category/fernet'}> FERNET </Link>
                 </li>
 
                 <li className="nav-item">
-                  <Link className="nav-link" to={'/contacto'}> CONTACTO </Link>
+                  <Link className="nav-link" to={'/category/aperitivos'}> APERITIVOS </Link>
+                </li>
+
+                <li className="nav-item">
+                  <Link className="nav-link" to={'/category/licores'}> LICORES </Link>
+                </li>
+
+                <li className="nav-item">
+                  <Link className="nav-link" to={'/category/vodka'}> VODKA </Link>
+                </li>
+
+                <li className="nav-item">
+                  <Link className="nav-link" to={'/category/whisky'}> WHISKY </Link>
                 </li>
               </ul>
               <form className="d-flex">

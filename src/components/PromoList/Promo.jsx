@@ -1,14 +1,14 @@
 import React from 'react'
-import ItemCount from '../ItemCount'
+import { Link } from "react-router-dom"
 
-const Promo = ({nombre, precio, desc, imgSrc, initial, stock}) => {
+const Promo = ({nombre, precio, desc, imgSrc, id}) => {
   return (
     <div className="promoCard">
         <img src={imgSrc} alt="" />
         <h4>{nombre}</h4>
         <p>${precio}</p>
         <p>{desc}</p>
-        <ItemCount initial = {initial} stock = {stock} nombreProducto = {nombre} />
+        <button className="detailBtn"> <Link className="detailLink" to={'/item/' + id}> Ver detalle </Link> </button>
     </div>
   )
 }
