@@ -1,8 +1,26 @@
 import React from 'react'
 import ItemCount from '../ItemCount'
 // import DetailCard from './DetailCard'
+import { useState, useEffect } from "react"
+import Swal from 'sweetalert2'
+import { Link } from 'react-router-dom'
 
 const PromoDetail = ({product, loading}) => {
+
+  const [goToCart, setGoToCart] = useState(false);
+
+  const onAdd = (count) => {
+    if (count <= product.stock) {
+      Swal.fire(
+        `${count} ${product.nombre} agregado/s al carrito`,
+        '',
+        'success'
+      )
+      setGoToCart(true)
+    } else{
+      alert(`No hay stock suficiente, pruebe agregando menos items al carrito`)
+    }
+}
 
   return (
 
@@ -23,7 +41,15 @@ const PromoDetail = ({product, loading}) => {
             <p>${product.precio}</p>
             <p>{product.desc}</p>
             <p>{product.descDetail}</p>
-            <ItemCount initial = {product.initial} stock = {product.stock} nombreProducto = {product.nombre} />
+
+            {
+              goToCart
+              ? <Link to='/cart'> FINALIZAR COMPRA </Link>
+              : <ItemCount initial = {product.initial} stock = {product.stock} onAdd={onAdd} />
+            }
+
+        
+      
         </div> 
 
         /* {loading || 

@@ -3,40 +3,28 @@ import { useState, useEffect } from "react"
 import { Icon } from '@iconify/react';
 import Swal from 'sweetalert2'
 
-const ItemCount = ({stock, initial, nombreProducto}) => {
+const ItemCount = ({stock, initial, onAdd}) => {
 
-const [numero, setNumero] = useState(initial);
+const [count, setCount] = useState(initial);
 
 useEffect(() => {
-    console.log("Cambió número, ahora el número es: ", numero)
-}, [numero])
+    setCount(initial)
+}, [initial])
 
-const restarUno = () => {
-  setNumero(numero-1)
+const decrease = () => {
+  setCount(count-1)
 }
 
-const sumarUno = () => {
-    setNumero(numero+1)
-}
-
-const onAdd = () => {
-  if (numero <= stock) {
-    Swal.fire(
-      `${numero} ${nombreProducto} agregado/s al carrito`,
-      '',
-      'success'
-    )
-  } else{
-    alert(`No hay stock suficiente, pruebe agregando menos items al carrito`)
-  }
+const increase = () => {
+    setCount(count+1)
 }
 
   return (
     <div className="buttonContainer">
-        <button className="controls" disabled={numero === 0} onClick={restarUno}> -1 </button>
-        <div> {numero} </div>
-        <button className="controls" disabled={numero === stock} onClick={sumarUno}> +1 </button>
-        <button className="agregarAlCarrito" disabled = {numero === 0 }  onClick={onAdd}> <Icon icon="iconoir:add-to-cart" className="iconifyAdd" />  </button>
+        <button className="controls" disabled={count === 0} onClick={decrease}> -1 </button>
+        <div> {count} </div>
+        <button className="controls" disabled={count === stock} onClick={increase}> +1 </button>
+        <button className="agregarAlCarrito" disabled = {count === 0 } onClick={() => onAdd(count)}> <Icon icon="iconoir:add-to-cart" className="iconifyAdd" />  </button>
     </div>
   )
 }

@@ -6,6 +6,8 @@ import PromoDetailContainer from './components/PromoDetail/PromoDetailContainer'
 import Navbar from './common/Navbar'
 import Footer from './common/Footer'
 
+import TestEventos from './components/TestEventos'
+
 
 
 function App() {
@@ -22,6 +24,7 @@ function App() {
         <Route path = "/" element={<PromoListContainer/>}/>
         <Route path = "/category/:idCategoria" element={<PromoListContainer/>}/>
         <Route path = "/item/:id" element={<PromoDetailContainer/>}/>
+        <Route path = "/testeventos" element={<TestEventos/>}/>
 
       </Routes>
 

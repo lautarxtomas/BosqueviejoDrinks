@@ -32,7 +32,7 @@ useEffect(() => {
         descDetail: "El fernet es una bebida alcohólica de la familia de los amaros italianos elaborada a partir de la maceración de varios tipos de hierbas ​ en alcohol obtenido de la fermentación de la vid. Dependiendo del productor, la maceración es posteriormente filtrada y reposada en toneles de roble durante un período variable.",
         imgSrc: "https://i.im.ge/2022/07/26/FLGOUW.png",
         initial: 1,
-        stock: 15
+        stock: 13
     },
   
     {
