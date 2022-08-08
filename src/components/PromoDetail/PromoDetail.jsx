@@ -5,18 +5,29 @@ import { useState, useEffect } from "react"
 import Swal from 'sweetalert2'
 import { Link } from 'react-router-dom'
 
+import { useContext } from 'react'
+import { cartContext } from '../context/CartContext'
+
+// ESTA LINEA SIMPLIFICA LAS DOS LINEAS DE ARRIBA GRACIAS A LA FUNCION QUE CREAMOS EN CARTCONTEXT
+// import { useCartContext } from '../context/CartContext'
+
 const PromoDetail = ({product, loading}) => {
 
   const [goToCart, setGoToCart] = useState(false);
 
-  const onAdd = (count) => {
-    if (count <= product.stock) {
+  const { addProduct } = useContext(cartContext)
+
+  // const { addProduct } = useCartContext() --> esta linea iría si usaramos el import simplificado de arriba
+
+  const onAdd = (quantity) => {
+    if (quantity <= product.stock) {
       Swal.fire(
-        `${count} ${product.nombre} agregado/s al carrito`,
+        `${quantity} ${product.nombre} agregado/s al carrito`,
         '',
         'success'
       )
       setGoToCart(true)
+      addProduct(product, quantity)
     } else{
       alert(`No hay stock suficiente, pruebe agregando menos items al carrito`)
     }

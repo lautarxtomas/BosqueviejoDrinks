@@ -122,7 +122,6 @@ useEffect(() => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             let specificProduct = productos.find(product => product.id == id)
-            console.log(specificProduct)
             resolve(specificProduct)
         }, 2000)
     })

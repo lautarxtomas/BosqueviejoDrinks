@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from "react"
 import { Icon } from '@iconify/react';
-import Swal from 'sweetalert2'
 
 const ItemCount = ({stock, initial, onAdd}) => {
 
@@ -19,12 +18,16 @@ const increase = () => {
     setCount(count+1)
 }
 
+const handleAgregar = () => {
+  onAdd(count)
+}
+
   return (
     <div className="buttonContainer">
         <button className="controls" disabled={count === 0} onClick={decrease}> -1 </button>
         <div> {count} </div>
         <button className="controls" disabled={count === stock} onClick={increase}> +1 </button>
-        <button className="agregarAlCarrito" disabled = {count === 0 } onClick={() => onAdd(count)}> <Icon icon="iconoir:add-to-cart" className="iconifyAdd" />  </button>
+        <button className="agregarAlCarrito" disabled = {count === 0 } onClick={handleAgregar}> <Icon icon="iconoir:add-to-cart" className="iconifyAdd" />  </button>
     </div>
   )
 }
