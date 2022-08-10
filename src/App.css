@@ -6,11 +6,18 @@
     font-family: 'Exo 2', sans-serif;
 }
 
+/* ---------------- CART VIEW ---------------- */
+
+.totalPrice{
+    font-size: 30px;
+}
+
 /* ---------------- NAVBAR ---------------- */
 
 .navbar{
     background-color: #AEDCC0;
     height: 150px;
+    text-decoration: none;
 }
 
 
@@ -23,7 +30,17 @@
     margin-right: 30px;
     margin-left: 15px;
     font-size: 50px;
-    color: #343E3D
+    color: #343E3D;
+    display: flex;
+    gap: 25px;
+}
+
+.cartWidget span {
+    font-size: 25px;
+    background-color: rgb(110, 190, 110);
+    color: whitesmoke;
+    padding: 5px 15px 5px 15px;
+    border-radius: 50px;
 }
 
 /* ---------------- FOOTER ---------------- */
