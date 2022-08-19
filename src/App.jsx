@@ -8,6 +8,7 @@ import Footer from './common/Footer'
 import Cart from './common/Cart'
 import TestEventos from './components/TestEventos'
 import CartContext from './components/context/CartContext'
+import Checkout from './components/Checkout'
 
 function App() {
   
@@ -28,6 +29,7 @@ function App() {
           <Route path = "/item/:idDetail" element={<PromoDetailContainer/>}/>
           <Route path = "/testeventos" element={<TestEventos/>}/>
           <Route path = "/cart" element={<Cart/>}/>
+          <Route path = "/checkout" element={<Checkout/>}/>
 
         </Routes>
 
