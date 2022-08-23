@@ -10,7 +10,7 @@ const Cart = () => {
 
   if (cart.length === 0){
     return (
-      <div className="promoList">
+      <div className="cart">
         <p>No hay elementos en el carrito</p>
         <Link to='/'> IR A LA TIENDA </Link>
       </div>
@@ -19,14 +19,14 @@ const Cart = () => {
 
   return (
     // TIENE LA MISMA CLASSNAME QUE PROMOLIST SOLO PARA QUE EL CART SE VEA IGUAL QUE EL INDEX
-    <div className="promoList">
+    <div className="cart">
       {
         cart.map(product => <ItemCart key={product.id} product={product} /> )
       }
       <p className="totalPrice">
         Total: ${totalPrice()}
       </p>
-      <button> <Link to='/checkout'> CHECKOUT </Link> </button>
+      <Link className="checkoutBtn" to='/checkout'> CHECKOUT </Link>
       
     </div>
   )

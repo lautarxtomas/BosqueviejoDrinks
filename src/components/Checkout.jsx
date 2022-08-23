@@ -3,7 +3,6 @@ import { useState, useEffect, useContext } from 'react'
 import { cartContext } from './context/CartContext'
 import { addDoc, collection, getFirestore, updateDoc } from 'firebase/firestore'
 
-
 const Checkout = () => {
 
     const { cart, setCart, totalPrice } = useContext(cartContext)
@@ -12,6 +11,7 @@ const Checkout = () => {
     const [tel, setTel] = useState('')
     const [email, setEmail] = useState('')
     const [idOrder, setIdOrder] = useState('')
+    const [finished, setFinished] = useState(false)
 
     const terminarCompra = () => {
         const order = 
@@ -28,24 +28,42 @@ const Checkout = () => {
 
         addDoc(refCollection, order).then((res) => {
             setIdOrder(res.id)
+            setFinished(true)
             setCart([])
         })
     }
 
   return (
-    <div style={{backgroundColor: '#ff000'}}>
-        <input type = {'text'} placeholder = "Ingresá tu nombre" value={name} onChange={(e) => setName(e.target.value)} />
-        <br />
-        <input type = {'tel'} placeholder = "Ingresá tu celular" value={tel} onChange={(e) => setTel(e.target.value)}/>
-        <br />        
-        <input type = {'email'}placeholder = "Ingresá tu e-mail" value={email} onChange={(e) => setEmail(e.target.value)}/>
-        <br />
-        <button onClick={terminarCompra}> FINALIZAR LA COMPRA </button>
 
-        
-        <p> TU CODIGO DE SEGUIMIENTO ES: {idOrder} </p>
-    </div>
+    <>
+    { 
+        !finished 
+        ? 
+        <div className="formCheckout">
+                
+            <input className="formInput" type = {'text'} placeholder = "Ingresá tu nombre" value={name} onChange={(e) => setName(e.target.value)} />
+            
+            <input className="formInput" type = {'tel'} placeholder = "Ingresá tu celular" value={tel} onChange={(e) => setTel(e.target.value)}/>
+                
+            <input className="formInput" type = {'email'} placeholder = "Ingresá tu e-mail" value={email} onChange={(e) => setEmail(e.target.value)}/>
+            
+            <button className="formBtn" onClick={terminarCompra}> FINALIZAR LA COMPRA </button>
+            
+        </div>
+
+        :
+        <div className="finished">
+            <p className="thx">¡MUCHAS GRACIAS POR TU COMPRA!</p>
+            <img src="https://i.im.ge/2022/08/24/O0mxk6.finished.png" alt="" /> 
+            <p className="code"> TU CODIGO DE SEGUIMIENTO ES: {idOrder} </p> 
+        </div>
+
+    }
+
+     </>
   )
 }
 
 export default Checkout
+
+// HACER VALIDACION CODIGO DE SEGUIMIENTO

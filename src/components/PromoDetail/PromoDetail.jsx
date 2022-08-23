@@ -55,18 +55,11 @@ const PromoDetail = ({product, loading}) => {
 
             {
               goToCart
-              ? <Link to='/cart'> FINALIZAR COMPRA </Link>
+              ? <Link className="finalizarCompra" to='/cart'> FINALIZAR COMPRA </Link>
               : <ItemCount initial = {product.initial} stock = {product.stock} onAdd={onAdd} />
             }
 
-        
-      
         </div> 
-
-        /* {loading || 
-          <DetailCard nombre={product.nombre} precio={product.precio} desc={product.desc} imgSrc={product.imgSrc} initial={product.initial} stock={product.stock} descDetail={product.descDetail}/>
-        }  */
-
       }
     </div>
     

@@ -11,7 +11,7 @@ const CartWidget = () => {
     
     <div className="cartWidget">
     <Icon icon="emojione-monotone:shopping-cart" className="cartWidget" />
-    <span> { cart.length != 0 ? totalProducts () : '' } </span>
+    <span className="totalProducts"> { cart.length != 0 ? totalProducts () : '' } </span>
     </div> 
 
   )

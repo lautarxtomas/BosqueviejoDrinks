@@ -1,5 +1,4 @@
 import './App.css'
-import Home from './components/Home'
 import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import PromoListContainer from './components/PromoList/PromoListContainer'
 import PromoDetailContainer from './components/PromoDetail/PromoDetailContainer'
@@ -27,7 +26,6 @@ function App() {
           <Route path = "/" element={<PromoListContainer/>}/>
           <Route path = "/category/:idCategoria" element={<PromoListContainer/>}/>
           <Route path = "/item/:idDetail" element={<PromoDetailContainer/>}/>
-          <Route path = "/testeventos" element={<TestEventos/>}/>
           <Route path = "/cart" element={<Cart/>}/>
           <Route path = "/checkout" element={<Checkout/>}/>
 

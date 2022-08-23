@@ -32,7 +32,7 @@
     font-size: 50px;
     color: #343E3D;
     display: flex;
-    gap: 25px;
+    gap: 3px;
 }
 
 .cartWidget span {
@@ -43,12 +43,17 @@
     border-radius: 50px;
 }
 
+.widget{
+    text-decoration: none;
+}
+
 /* ---------------- FOOTER ---------------- */
 
 footer{
     background-color: #607466;
-    height: 400px;
+    height: 235px;
     display: flex;
+    justify-self: flex-end;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -80,9 +85,12 @@ footer{
 /* ------------------------------- HOME ---------------------------------- */
 
 .home{
-    height: 100vh;
+    height: auto;
+    min-height: 1000px;
+    background-image: radial-gradient(rgb(102, 153, 113), rgb(210, 228, 220));
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .promoList{
@@ -157,6 +165,21 @@ footer{
     color: black;
 }
 
+.finalizarCompra{
+    text-decoration: none;
+    color: whitesmoke;
+    background-color: rgb(109, 161, 109);
+    padding: 12px;
+    border-radius: 20px;
+}
+
+.finalizarCompra:hover{
+    background-color: rgb(51, 94, 51);
+    color: whitesmoke;
+}
+
+
+
 
 
 /* ------------ ITEM COUNT / ADD TO CART BTN ------------ */
@@ -202,6 +225,125 @@ footer{
     font-size: 20px;
 }
 
+/* ------------ CART ------------ */
+
+.cart{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin: 50px;
+    
+}
+
+.itemCart{
+    display: flex;
+    height: 100px;
+    width: 1000px;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: space-around;
+    padding: 80px 3px 80px 3px;
+    
+    background-image: linear-gradient(to bottom, rgb(167, 187, 167), #607466)
+    
+}
+
+.itemCart p{
+    margin-top: 15px;
+}
+
+.itemCart img{
+    width: 100px;
+}
+
+.checkoutBtn{
+    border-radius: 20px;
+    background-color:rgb(83, 153, 83);
+    height: 50px;
+    padding: 30px;
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.checkoutBtn:hover{
+    background-color: rgb(73, 122, 73);
+    color: whitesmoke;
+}
+
+
+.checkoutBtn:focus{
+    background: linear-gradient(to bottom, rgb(90, 194, 116), rgb(61, 129, 61));
+    color: black;
+}
+
+/* ------------ CHECKOUT FORM ------------ */
+
+.formCheckout{
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    width: 350px;
+    align-self: center;
+    
+}
+
+.formInput{
+    color: whitesmoke;
+    border: none;
+    border-bottom: solid 3px rgb(26, 75, 46);
+    background: transparent;
+    margin: 20px;
+    height: 50px;
+    
+}
+
+.formInput::placeholder{
+    color: whitesmoke;
+}
+
+.formInput:focus{
+    background: linear-gradient(to bottom, transparent, rgb(90, 194, 116));
+    outline: none;
+    color: rgb(0, 0, 0);
+}
+
+.formBtn{
+    border-radius: 20px;
+    background-color:rgb(83, 153, 83);
+    height: 50px;
+    color: whitesmoke;
+}
+
+.formBtn:hover{
+    background-color: rgb(68, 105, 68);
+}
+
+.formBtn:focus{
+    background: linear-gradient(to bottom, transparent, rgb(68, 105, 68));
+}
+
+.finished{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.finished img{
+    width: 500px;
+}
+
+.thx{
+    font-size: 25px;
+}
+
+.code{
+    margin-top: 25px;
+}
+
 /* --------------------------------------------------------------------------------- */
 
 
@@ -220,7 +362,6 @@ footer{
 
 
     .home{
-        background-image: linear-gradient(to bottom, rgb(117, 172, 117), rgb(59, 87, 59));
         height: auto;
     }
 
@@ -254,12 +395,49 @@ footer{
         top: 8px;
     }
 
+    
+    
+    .promoDetailCard img{
+        width: 140px;
+    }
+
+    footer{
+        font-size: 30px;
+    }
+
+    
+
+/* ------------ CART ------------ */
+
+    .cart{
+        gap: 30px;
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+
+    .itemCart{
+        display: flex;
+        flex-direction: column;
+        height: 75vh;
+        width: 50vh;
+        margin: 30px;
+    }
+
+
+/* ------------ CHECKOUT ------------ */
+    .formCheckout{
+        height: auto
+    }
 }
 
 
 
 /* ------------------------ TABLET RESPONSIVE ------------------------ */
 @media screen and (min-width: 451px) and (max-width: 1024px){
+
+.home{
+    height: auto;
+}
 
 .navbar{
     height: auto;
@@ -289,6 +467,38 @@ footer{
     position: relative;
     top: 8px;
 }
+
+.promoDetailCard img{
+    width: 140px;
+}
+
+footer{
+    font-size: 30px;
+}
+
+
+
+/* ------------ CART ------------ */
+
+    .cart{
+        gap: 30px;
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+
+    .itemCart{
+        display: flex;
+        flex-direction: column;
+        height: 75vh;
+        width: 50vh;
+        margin: 30px;
+    }
+
+/* ------------ CHECKOUT ------------ */
+
+    .formCheckout{
+        height: auto
+    }
 
 }
 

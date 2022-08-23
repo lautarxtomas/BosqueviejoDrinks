@@ -8,9 +8,9 @@ const { removeProduct } = useContext(cartContext)
 
   return (
     // CLASSNAME PROVISORIO
-    <div className = "promoCard"> 
+    <div className = "itemCart"> 
         <img src={product.imgSrc} alt="" />
-        <h4>{product.nombre}</h4>
+        <p>{product.nombre}</p>
         <p>${product.precio}</p>
         <p>{product.desc}</p>
         <p>SUBTOTAL: ${product.quantity * product.precio}</p>
