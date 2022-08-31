@@ -14,7 +14,7 @@ const { idDetail } = useParams()
 
 useEffect(() => {
   const db = getFirestore()
-  const queryDoc = doc(db, 'productos', idDetail)
+  const queryDoc = doc(db, 'products', idDetail)
   getDoc(queryDoc)
   .then( res => setDrink( {id: res.id, ...res.data()} ) )
   .catch((e) => {

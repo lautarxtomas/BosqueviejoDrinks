@@ -17,7 +17,7 @@ const PromoList = ({products, loading}) => {
     {
       products.map((item) =>
 
-      <Promo key={item.id} id={item.id} nombre={item.nombre} precio={item.precio} desc={item.desc} imgSrc={item.imgSrc} initial={item.initial} stock={item.stock} />
+      <Promo key={item.id} id={item.id} name={item.name} price={item.price} desc={item.desc} imgSrc={item.imgSrc} initial={item.initial} stock={item.stock} />
 
       )
     }

@@ -1,14 +1,14 @@
 import React from 'react'
 import { Link } from "react-router-dom"
 
-const Promo = ({nombre, precio, desc, imgSrc, id}) => {
+const Promo = ({name, price, desc, imgSrc, id}) => {
   return (
     <div className="promoCard">
         <img src={imgSrc} alt="" />
-        <h4>{nombre}</h4>
-        <p>${precio}</p>
+        <h4>{name}</h4>
+        <p>${price}</p>
         <p>{desc}</p>
-        <button className="detailBtn"> <Link className="detailLink" to={'/item/' + id}> Ver detalle </Link> </button>
+        <Link className="detailLink" to={'/item/' + id}> <button className="detailBtn">  Ver detalle </button> </Link> 
     </div>
   )
 }

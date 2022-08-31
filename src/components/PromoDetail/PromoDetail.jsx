@@ -22,7 +22,7 @@ const PromoDetail = ({product, loading}) => {
   const onAdd = (quantity) => {
     if (quantity <= product.stock) {
       Swal.fire(
-        `${quantity} ${product.nombre} agregado/s al carrito`,
+        `${quantity} ${product.name} agregado/s al carrito`,
         '',
         'success'
       )
@@ -48,14 +48,14 @@ const PromoDetail = ({product, loading}) => {
       {loading || // SI NO PONGO ESTO, DURANTE EL LOADING SE PRERENDERIZA LA CARD SIN LOS VALORES CARGADOS, QUEDANDO FEO A LA VISTA (Y TAMPOCO ANDA EL ITEMCOUNT SIN ESTO).
         <div className="promoDetailCard">
             <img src={product.imgSrc} alt="" />
-            <h4>{product.nombre}</h4>
-            <p>${product.precio}</p>
+            <h4>{product.name}</h4>
+            <p>${product.price}</p>
             <p>{product.desc}</p>
             <p>{product.descDetail}</p>
 
             {
               goToCart
-              ? <Link className="finalizarCompra" to='/cart'> FINALIZAR COMPRA </Link>
+              ? <Link className="greenBtn" to='/cart'> FINALIZAR COMPRA </Link>
               : <ItemCount initial = {product.initial} stock = {product.stock} onAdd={onAdd} />
             }
 

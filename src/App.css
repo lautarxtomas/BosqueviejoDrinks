@@ -86,11 +86,10 @@ footer{
 
 .home{
     height: auto;
-    min-height: 1000px;
     background-image: radial-gradient(rgb(102, 153, 113), rgb(210, 228, 220));
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    
+    
+
 }
 
 .promoList{
@@ -165,22 +164,6 @@ footer{
     color: black;
 }
 
-.finalizarCompra{
-    text-decoration: none;
-    color: whitesmoke;
-    background-color: rgb(109, 161, 109);
-    padding: 12px;
-    border-radius: 20px;
-}
-
-.finalizarCompra:hover{
-    background-color: rgb(51, 94, 51);
-    color: whitesmoke;
-}
-
-
-
-
 
 /* ------------ ITEM COUNT / ADD TO CART BTN ------------ */
 
@@ -234,7 +217,13 @@ footer{
     align-items: center;
     gap: 30px;
     margin: 50px;
+    min-height: 500px;
     
+}
+
+.emptyCart{
+    width: 200px;
+    margin-right: 35px;
 }
 
 .itemCart{
@@ -258,7 +247,7 @@ footer{
     width: 100px;
 }
 
-.checkoutBtn{
+.greenBtn{
     border-radius: 20px;
     background-color:rgb(83, 153, 83);
     height: 50px;
@@ -269,13 +258,13 @@ footer{
     text-decoration: none;
 }
 
-.checkoutBtn:hover{
+.greenBtn:hover{
     background-color: rgb(73, 122, 73);
     color: whitesmoke;
 }
 
 
-.checkoutBtn:focus{
+.greenBtn:focus{
     background: linear-gradient(to bottom, rgb(90, 194, 116), rgb(61, 129, 61));
     color: black;
 }
@@ -285,10 +274,12 @@ footer{
 .formCheckout{
     display: flex;
     flex-direction: column;
-    margin: 50px;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    min-height: 500px;
     width: 350px;
-    align-self: center;
-    
 }
 
 .formInput{
@@ -330,6 +321,8 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .finished img{
@@ -428,6 +421,14 @@ footer{
     .formCheckout{
         height: auto
     }
+
+    .thx{
+        font-size: 23px;
+    }
+
+    .finished img{
+        width: 300px;
+    }
 }
 
 
@@ -492,6 +493,10 @@ footer{
         height: 75vh;
         width: 50vh;
         margin: 30px;
+    }
+
+    .itemCart img{
+        width: 200px;
     }
 
 /* ------------ CHECKOUT ------------ */

@@ -11,8 +11,9 @@ const Cart = () => {
   if (cart.length === 0){
     return (
       <div className="cart">
-        <p>No hay elementos en el carrito</p>
-        <Link to='/'> IR A LA TIENDA </Link>
+        <h2>No hay elementos en el carrito</h2>
+        <img className="emptyCart" src="https://i.im.ge/2022/08/31/OEngQ6.107831.png" alt="" />
+        <Link className="greenBtn" to='/'> IR A LA TIENDA </Link>
       </div>
     )
   }
@@ -26,7 +27,7 @@ const Cart = () => {
       <p className="totalPrice">
         Total: ${totalPrice()}
       </p>
-      <Link className="checkoutBtn" to='/checkout'> CHECKOUT </Link>
+      <Link className="greenBtn" to='/checkout'> CHECKOUT </Link>
       
     </div>
   )

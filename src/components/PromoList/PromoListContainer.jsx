@@ -10,16 +10,16 @@ const PromoListContainer = () => {
 const [drinks, setDrinks] = useState([])
 const [error, setError] = useState(false)
 const [loading, setLoading] = useState(true)
-const { idCategoria } = useParams()
+const { idCategory } = useParams()
 
 
 useEffect(() => {
   const db = getFirestore()
-  const queryCollection = collection(db, 'productos')
+  const queryCollection = collection(db, 'products')
   
   setTimeout(() => {
-    if (idCategoria) {
-      const queryFilter = query(queryCollection, where('idCategoria', '==', idCategoria))
+    if (idCategory) {
+      const queryFilter = query(queryCollection, where('idCategory', '==', idCategory))
       getDocs(queryFilter)
       .then(res => setDrinks(res.docs.map(product => ({ id: product.id, ...product.data() }) )))
       .catch((e) => {
@@ -40,7 +40,7 @@ useEffect(() => {
     }
   }, 500)
   
-}, [idCategoria])
+}, [idCategory])
 
 
   return (

@@ -10,10 +10,10 @@ const { removeProduct } = useContext(cartContext)
     // CLASSNAME PROVISORIO
     <div className = "itemCart"> 
         <img src={product.imgSrc} alt="" />
-        <p>{product.nombre}</p>
-        <p>${product.precio}</p>
+        <p>{product.name}</p>
+        <p>${product.price}</p>
         <p>{product.desc}</p>
-        <p>SUBTOTAL: ${product.quantity * product.precio}</p>
+        <p>SUBTOTAL: ${product.quantity * product.price}</p>
         <button className="detailBtn" onClick={() => removeProduct(product.id)}> Eliminar </button>
     </div>
   )

@@ -18,7 +18,7 @@ const increase = () => {
     setCount(count+1)
 }
 
-const handleAgregar = () => {
+const handleAdd = () => {
   onAdd(count)
 }
 
@@ -27,7 +27,7 @@ const handleAgregar = () => {
         <button className="controls" disabled={count === 0} onClick={decrease}> -1 </button>
         <div> {count} </div>
         <button className="controls" disabled={count === stock} onClick={increase}> +1 </button>
-        <button className="agregarAlCarrito" disabled = {count === 0 } onClick={handleAgregar}> <Icon icon="iconoir:add-to-cart" className="iconifyAdd" />  </button>
+        <button className="agregarAlCarrito" disabled = {count === 0 } onClick={handleAdd}> <Icon icon="iconoir:add-to-cart" className="iconifyAdd" />  </button>
     </div>
   )
 }

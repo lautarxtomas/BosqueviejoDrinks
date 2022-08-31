@@ -17,14 +17,14 @@ const Checkout = () => {
         const order = 
         { 
             buyer: {name, tel, email}, 
-            items: cart.map(product => ({id: product.id, nombre: product.nombre, precio: product.precio, cantidad: product.quantity})),
+            items: cart.map(product => ({id: product.id, name: product.name, price: product.price, quantity: product.quantity})),
             total: totalPrice()
         }
 
         console.log(order)
 
         const db = getFirestore()
-        const refCollection = collection(db, 'pedidos')
+        const refCollection = collection(db, 'orders')
 
         addDoc(refCollection, order).then((res) => {
             setIdOrder(res.id)
