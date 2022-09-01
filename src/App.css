@@ -337,6 +337,43 @@ footer{
     margin-top: 25px;
 }
 
+
+/* ------------------------ NOSOTROS DESKTOP ------------------------ */
+
+.nosotros{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.bosqueviejo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 500px;
+    border-bottom: solid 30px rgb(33, 70, 82);
+    padding: 30px;
+    background-color: rgb(118, 185, 152);
+    text-align: center;
+}
+
+.bosqueviejo img{
+    width: 400px;
+}
+
+.metodosDePago{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(to bottom, rgb(78, 131, 111), rgb(129, 151, 199));
+    padding: 40px;
+}
+
+.metodosDePago img{
+    width: 200px;
+}
+
+
 /* --------------------------------------------------------------------------------- */
 
 
