@@ -19,7 +19,7 @@ const Cart = () => {
   }
 
   return (
-    // TIENE LA MISMA CLASSNAME QUE PROMOLIST SOLO PARA QUE EL CART SE VEA IGUAL QUE EL INDEX
+
     <div className="cart">
       {
         cart.map(product => <ItemCart key={product.id} product={product} /> )
@@ -30,6 +30,7 @@ const Cart = () => {
       <Link className="greenBtn" to='/checkout'> CHECKOUT </Link>
       
     </div>
+    
   )
 }
 

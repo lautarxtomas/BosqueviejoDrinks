@@ -2,8 +2,6 @@ import React from 'react'
 import { createContext } from 'react'
 import { useState, useEffect } from 'react'
 
-// export const useCartContext = () => useContext(cartContext)
-
 export const cartContext = createContext()
 
 const CartContext = ({children}) => {
@@ -15,8 +13,8 @@ const CartContext = ({children}) => {
   }, [cart])
 
   const addProduct = (item, newQuantity) => {
-    const newCart = cart.filter(prod => prod.id !== item.id)  // LE ASIGNAMOS A NEWCART TODOS LOS ITEMS DEL CART MENOS EL QUE ELEGI
-    newCart.push({...item, quantity: newQuantity}) // Y LUEGO LO VUELVE A METER AL CARRITO, AGREGANDO LA PROPIEDAD QUANTITY AL ARRAY, Y SOBREESCRIBIENDO ESA CANTIDAD POR LA CANTIDAD NUEVA QUE ELIJA EL USER. SOLO EL CART VA A TENER LA PROPIEDAD QUANTITY.
+    const newCart = cart.filter(prod => prod.id !== item.id)
+    newCart.push({...item, quantity: newQuantity}) 
     setCart(newCart)
   }
 
@@ -32,9 +30,6 @@ const CartContext = ({children}) => {
     setCart([])
   }
     
-
-  // const isInCart = (id) => cart.find(product => product.id === id) ? true : false
-
   const removeProduct = (id) => {
     setCart(cart.filter(product => product.id !== id))
   }
@@ -44,7 +39,6 @@ const CartContext = ({children}) => {
       cart,
       setCart,
       clearCart,
-      // isInCart,
       removeProduct,
       addProduct,
       totalPrice,

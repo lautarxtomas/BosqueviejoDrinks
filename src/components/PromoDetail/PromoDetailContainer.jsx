@@ -29,7 +29,6 @@ useEffect(() => {
   return (
     <div className="promoListContainer">
 
-      {/* SI ERROR ESTA EN TRUE (SETEADO EN EL CATCH) TIRA MSJ DE ERROR EN CLG */}
       {error && console.log("Algo salió mal")}
 
      <PromoDetail product={drink} loading={loading} />

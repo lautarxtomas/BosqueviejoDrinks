@@ -66,4 +66,3 @@ const Checkout = () => {
 
 export default Checkout
 
-// HACER VALIDACION CODIGO DE SEGUIMIENTO

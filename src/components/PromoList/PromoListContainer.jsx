@@ -1,6 +1,5 @@
 import React from 'react'
 import PromoList from './PromoList'
-// import data from "../products/drinks.json"
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { getFirestore, collection, getDocs, query, where } from 'firebase/firestore'
@@ -46,7 +45,6 @@ useEffect(() => {
   return (
     <div className="promoListContainer">
 
-      {/* SI ERROR ESTA EN TRUE (SETEADO EN EL CATCH) TIRA MSJ DE ERROR EN CLG */}
       {error && console.log("Algo salió mal")}
 
      <PromoList products={drinks} loading={loading} />

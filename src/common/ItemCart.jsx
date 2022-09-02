@@ -7,7 +7,6 @@ const ItemCart = ({product}) => {
 const { removeProduct } = useContext(cartContext)
 
   return (
-    // CLASSNAME PROVISORIO
     <div className = "itemCart"> 
         <img src={product.imgSrc} alt="" />
         <p>{product.name}</p>
