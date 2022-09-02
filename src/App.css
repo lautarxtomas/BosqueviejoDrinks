@@ -437,7 +437,7 @@ footer{
 
     
 
-/* ------------ CART ------------ */
+/* ------------ CART MOBILE ------------ */
 
     .cart{
         gap: 30px;
@@ -466,6 +466,20 @@ footer{
     .finished img{
         width: 300px;
     }
+
+
+/* ------------------------ NOSOTROS MOBILE ------------------------ */
+
+    .bosqueviejo{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .metodosDePago{
+    text-align: center;
+    }
+
 }
 
 

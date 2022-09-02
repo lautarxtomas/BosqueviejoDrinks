@@ -9,7 +9,7 @@ const Nosotros = () => {
     <div className="nosotros">
 
       <div className="bosqueviejo">
-        <img src={logo} alt="" />
+        <img src={logo} alt=""/>
         <p style={{fontSize: 20}}>
           SOMOS BOSQUEVIEJO DRINKS, UN NEGOCIO DE BEBIDAS AL MEJOR PRECIO, CON
           ENVÍOS HASTA LA PUERTA DE TU CASA Y CON VARIADOS MÉTODOS DE PAGO
