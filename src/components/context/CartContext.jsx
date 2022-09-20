@@ -6,13 +6,11 @@ export const cartContext = createContext()
 
 const CartContext = ({children}) => {
 
-  // const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cart') || []))
+  const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cart') || []))
 
-  const [cart, setCart] = useState([])
-
-  // useEffect(() => {
-  //     localStorage.setItem('cart', JSON.stringify(cart))
-  // }, [cart])
+  useEffect(() => {
+      localStorage.setItem('cart', JSON.stringify(cart))
+  }, [cart])
 
   const addProduct = (item, newQuantity) => {
     const newCart = cart.filter(prod => prod.id !== item.id)
